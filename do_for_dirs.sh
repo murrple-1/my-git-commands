@@ -14,6 +14,18 @@ else
     COLORIZE=0
 fi
 
+if [ $COLORIZE = 1 ]; then
+    tpu setaf 6
+fi
+
+pwd
+
+if [ $COLORIZE = 1 ]; then
+    tpu sgr0
+fi
+
+eval "$COMMAND"
+
 for D in *; do
     if [ -d "${D}" ]; then
         cd "${D}" || exit
