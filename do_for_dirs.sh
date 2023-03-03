@@ -15,13 +15,13 @@ else
 fi
 
 if [ $COLORIZE = 1 ]; then
-    tpu setaf 6
+    tput setaf 6
 fi
 
 pwd
 
 if [ $COLORIZE = 1 ]; then
-    tpu sgr0
+    tput sgr0
 fi
 
 eval "$COMMAND"
